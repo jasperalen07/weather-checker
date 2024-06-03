@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <div class="container">
     <h1>Hello World</h1>
 
 <input type="text" id="searchInput" placeholder="Enter your city">
 <button class="searchButton" id="SearchBtn">Search</button>
 
-<div id="weatherInfo" class="hidden"></div>
+<div id="weatherInfo" class="hidden">
 <h2 id="city"></h2>
 <p id="temperature"></p>
 <p id="humid"></p>
 <p id="description"> </p>
-<img src="weatherIcon" src="" alt="Weather Icon">
+<img src="weatherIcon" class="weather-img" src="" alt="Weather Icon">
+</div>
+
+</div>
     <script src="scripts/app.js"></script>
 </body>
 </html>
