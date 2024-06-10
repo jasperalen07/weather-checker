@@ -1,8 +1,19 @@
 body{
     margin: 0;
     padding: 0;
-    background-color:#254336 ;
-    color: #FFFFFF;
+    background-image: url(../images/northern-lights.jpg);
+    height: 100vh;
+    width: 100%;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    color: #101010;
+    font-family: "Roboto Slab", serif;
 }
 
 .container{
@@ -11,25 +22,38 @@ body{
     flex-direction: column;
     text-align: center;
     padding: 1.3rem;
-    width: 80%;
-    margin: 0 1.2rem;
+    max-width: 31.2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 1.7rem;
+    border-radius: 1rem;
 
 }
+
+
 
 .hidden {
     display: none;
 }
 
-#cityInput{
-    padding: .6rem;
+#city{
+    padding: 1rem;
     width: 100%;
-    max-width: 19rem;
+    max-width: 12rem;
     margin-bottom: .6rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
 }
 
-#searchBtn {
-    padding: .7rem 1.2rem;
+#searchInput {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 50%;
+    border-radius: 1rem;
     cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
 }
 
 #weatherInfo{
@@ -41,27 +65,37 @@ body{
     height: auto;
 }
 
-@media(min-width){
+@media(min-width: 768px){
    .container{
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 0;
-    width: 80%
+
+    flex-direction: column;
+   align-items: center;
+    padding: 2rem;
+    width: 50%
    }
 
-   #cityInput{
+    .input-group { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 19rem;
+    }
+
+   #city, #searchInput{
+    width: 50%;
+    max-width: 100%;
     padding: .7rem;
-    margin-bottom: .7rem;
+    margin: .5rem 0;
+
+    
    }
+   #searchInput {
+width: 20%;
+margin-top: 1rem;
+}
 
    #weatherInfo {
-    margin-top: 1.2rem;
+    margin-top: 2rem;
    }
 
-   #searchBtn {
-    padding: 10px 20px;
-    width: 50%;
-}
 }

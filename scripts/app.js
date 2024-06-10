@@ -5,14 +5,15 @@
 
 
 // declare variables for the ID's
-const searchInput = document.getElementById('searchInput');
 const cityInput = document.getElementById('city'); 
+const searchInput = document.getElementById('searchInput');
 const cityName = document.getElementById('cityName');
+const weatherInfo = document.getElementById('weatherInfo');
 const temperature = document.getElementById('temperature');
 const humidity = document.getElementById('humidity');
 const description = document.getElementById('description');
 const weatherIcon = document.getElementById('weatherIcon');
-const weatherInfo = document.getElementById('weatherInfo');
+
 
 //Do a Event Listener for the button
 searchInput.addEventListener('click', function(){
@@ -25,12 +26,14 @@ searchInput.addEventListener('click', function(){
    
 });
 
-//Function to fetch the Api
+
 // Function to fetch the API
 async function fetchWeatherData(city){
     const apiKey = '6da341b38de840d382f21256240406';
     const apiUrl =  `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
+
+    //This will only display when a data doesnt't exist
     try {
         const response = await fetch(apiUrl);
         if(!response.ok){
@@ -44,10 +47,9 @@ async function fetchWeatherData(city){
 }
 
 
-// Function for the weather data 
+// Function for the weather data to output
 
 function displayWeatherData(data) {
-    // Log the entire data object for debugging
     console.log(data);
 
     // Access and log specific data inside the function
