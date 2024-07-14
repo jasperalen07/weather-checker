@@ -3,11 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Checker</title>
+    <title>Weather App Project</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World</h1>
+
+    <!-- form of text box and a search button -->
+    <div class="container">
+
+        <h1 class="tilte">Weather Finder</h1>
+        <div class="input-group">
+
+            <input type="text" id="city" placeholder="Enter city name...">
+            <button id="searchInput">Get Weather</button>
+        </div>
+
+   
+    <!-- elements to output the data information  -->
+    <div id="weatherInfo" class="hidden">
+
+        <!-- The content is empty because the api will provide it -->
+        <h2 id="cityName"></h2>
+        <p id="temperature"></p>
+        <p id="humidity"></p>
+        <p id="description"></p>
+        <img id="weatherIcon" src="" alt="Weather Icon">
+
+    </div>
+
+</div>
     <script src="scripts/app.js"></script>
 </body>
 </html>

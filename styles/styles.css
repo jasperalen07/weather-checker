@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/beach.jpg);
+    height: 100vh;
+    width: 100%;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    color: #101010;
+    font-family: "Roboto Slab", serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.3rem;
+    max-width: 31.2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 1.7rem;
+    border-radius: 1rem;
+
+}
+
+.title{
+    font-size: 1rem;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#city{
+    padding: 1rem;
+    width: 100%;
+    max-width: 12rem;
+    margin-bottom: .6rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+}
+
+#searchInput {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 50%;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+#weatherInfo{
+    margin-top: 1.3rem;
+}
+
+.weather-img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media(min-width: 768px){
+   .container{
+
+    flex-direction: column;
+   align-items: center;
+    padding: 2rem;
+    width: 50%;
+    max-width: 700px;
+   }
+
+   .title{
+    font-size: 2rem;
+}
+
+/* 
+    /* .input-group { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    } */ */
+ 
+   #city{
+  width: 20%;
+
+    
+   } 
+
+   #searchInput {
+width: 45%;
+margin-top: 1rem;
+}
+
+#searchInput:hover{
+    background-color: #101010;
+    color: whitesmoke;
+   
+}
+
+   #weatherInfo {
+    margin-top: 2rem;
+   }
+
+}
